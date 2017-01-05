@@ -1,0 +1,27 @@
+{
+  "name": "userportal",
+  "version": "1.0.0",
+  "description": "template for user portal",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmarr768/userportal.git"
+  },
+  "author": "Colin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmarr768/userportal/issues"
+  },
+  "homepage": "https://github.com/cmarr768/userportal#readme",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^5.0.1",
+    "redux": "^3.6.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
