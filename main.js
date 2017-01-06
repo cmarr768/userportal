@@ -1,12 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import App from './src/components/App';
+import PortalApp from './src/reducers/portalApp';
+import DataService from './src/services/dataService';
 
-console.log('rendering app');
+let store = createStore(PortalApp, {}, compose(applyMiddleware(DataService)));
+console.log('store state after initialization:', store.getState());
+store.dispatch({ type: 'GET_IMGUR_MOCK_DATA' });
 
 render(
-    <div>
+    <Provider store={store}>
         <App />
-    </div>,
+    </Provider>,
     document.getElementById('app')
 );
